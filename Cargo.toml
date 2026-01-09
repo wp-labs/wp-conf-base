@@ -1,0 +1,27 @@
+[package]
+name = "wp-conf-base"
+version = "0.7.4"
+edition = "2024"
+license = "Elv2"
+authors = ["WarpParse Dev Team"]
+
+[lib]
+name = "wp_conf_base"
+
+[dependencies]
+wp-model-core = "0.7"
+wp-connector-api = "0.7"
+log = "0.4"
+toml = "0.9"
+orion-error = "0.5"
+orion-variate= "0.10"
+orion_conf =  { version = "0.4", features = ["toml"]}
+winnow = "0.7"
+derive_more = "2.1"
+
+serde = { version = "1.0", features = ["derive"] }
+thiserror = "2.0"
+serde_json = "1.0"
+chrono = { version = "0.4", features = ["serde"] }
+anyhow = "1.0"
+getset = "0.1"
