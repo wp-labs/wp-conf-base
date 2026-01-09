@@ -1,5 +1,9 @@
 # wp-conf-base
 
+![CI](https://github.com/wp-labs/wp-conf-base/workflows/CI/badge.svg)
+[![codecov](https://codecov.io/gh/wp-labs/wp-conf-base/graph/badge.svg?token=6SVCXBHB6B)](https://codecov.io/gh/wp-labs/wp-conf-base)
+
+
 `wp-conf-base` 是 WarpParse 配置体系中的底层 crate，封装了通用的配置建模、解析与校验工具，供各个 connector 或上层配置仓库复用。核心能力包括：
 
 - 统一的 connector kind 适配接口 `ConnectorKindAdapter`，用于描述连接器的默认参数、URL 解析逻辑与默认格式。
