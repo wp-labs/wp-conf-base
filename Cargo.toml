@@ -3,7 +3,14 @@ name = "wp-conf-base"
 version = "0.7.4"
 edition = "2024"
 license = "Elv2"
+description = "Common configuration primitives, adapters, and validators shared by WarpParse connectors."
 authors = ["WarpParse Dev Team"]
+readme = "README.md"
+repository = "https://github.com/wp-labs/-wp-conf-base"
+homepage = "https://github.com/wp-labs/-wp-conf-base"
+documentation = "https://docs.rs/wp-conf-base"
+keywords = ["config", "connector", "warp", "orion", "wp"]
+categories = ["config"]
 
 [lib]
 name = "wp_conf_base"
