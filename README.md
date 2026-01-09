@@ -99,4 +99,4 @@ cargo test
 
 ## 许可
 
-本仓库遵循 Elastic License 2.0 (`Elv2`)。
+本仓库遵循 Elastic License 2.0 (`Elastic-2.0`)。

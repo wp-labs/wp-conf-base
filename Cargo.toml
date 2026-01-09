@@ -1,8 +1,8 @@
 [package]
 name = "wp-conf-base"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2024"
-license = "Elv2"
+license = "Elastic-2.0"
 description = "Common configuration primitives, adapters, and validators shared by WarpParse connectors."
 authors = ["WarpParse Dev Team"]
 readme = "README.md"
