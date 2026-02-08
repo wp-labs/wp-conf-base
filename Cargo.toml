@@ -1,6 +1,6 @@
 [package]
 name = "wp-conf-base"
-version = "0.1.1"
+version = "0.1.2"
 edition = "2024"
 license = "Elastic-2.0"
 description = "Common configuration primitives, adapters, and validators shared by WarpParse connectors."
@@ -16,7 +16,7 @@ categories = ["config"]
 name = "wp_conf_base"
 
 [dependencies]
-wp-model-core = "0.7"
+wp-model-core = "0.8"
 wp-connector-api = "0.7"
 log = "0.4"
 toml = "0.9"
