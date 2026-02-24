@@ -17,7 +17,7 @@ name = "wp_conf_base"
 
 [dependencies]
 wp-model-core = "0.8"
-wp-connector-api = "0.7"
+wp-connector-api = "0.8"
 log = "0.4"
 toml = "0.9"
 orion-error = "0.5"
