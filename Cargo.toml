@@ -1,6 +1,6 @@
 [package]
 name = "wp-conf-base"
-version = "0.2.0"
+version = "0.2.1"
 edition = "2024"
 license = "Elastic-2.0"
 description = "Common configuration primitives, adapters, and validators shared by WarpParse connectors."
@@ -21,8 +21,8 @@ wp-connector-api = "0.8"
 log = "0.4"
 toml = "1.0"
 orion-error = "0.6"
-orion-variate= "0.10"
-orion_conf =  { version = "0.4", features = ["toml"]}
+orion-variate= "0.11"
+orion_conf =  { version = "0.5", features = ["toml"]}
 winnow = "0.7"
 derive_more = "2.1"
 
