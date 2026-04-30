@@ -1,6 +1,6 @@
 [package]
 name = "wp-conf-base"
-version = "0.2.1"
+version = "0.3.0" # @gxl:set(version)
 edition = "2024"
 license = "Elastic-2.0"
 description = "Common configuration primitives, adapters, and validators shared by WarpParse connectors."
@@ -27,8 +27,8 @@ winnow = "1.0"
 derive_more = "2.1"
 
 serde = { version = "1.0", features = ["derive"] }
-thiserror = "2.0"
-serde_json = "1.0"
-chrono = { version = "0.4", features = ["serde"] }
 anyhow = "1.0"
-getset = "0.1"
+
+[dev-dependencies]
+serde_json = "1.0"
+toml = "1.0"
