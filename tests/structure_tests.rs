@@ -1,4 +1,5 @@
-use orion_conf::error::{ConfIOReason, StructError};
+use orion_conf::ToStructError;
+use orion_conf::error::ConfIOReason;
 use orion_variate::{EnvDict, EnvEvalable};
 use serde::Deserialize;
 use std::str::FromStr;
@@ -106,18 +107,14 @@ fn test_conf_std_operation_try_load() {
 
     impl ConfStdOperation for FileBackedConf {
         fn load(path: &str, dict: &EnvDict) -> orion_conf::error::OrionConfResult<Self> {
-            let mut raw = std::fs::read_to_string(path).map_err(|err| {
-                StructError::from(ConfIOReason::Other(format!("io error: {}", err)))
-            })?;
+            let mut raw = std::fs::read_to_string(path)
+                .map_err(|err| ConfIOReason::Other(format!("io error: {}", err)).to_err())?;
             raw = raw.env_eval(dict);
             match raw.trim() {
                 "ok" => Ok(FileBackedConf {
                     marker: "ok".to_string(),
                 }),
-                other => {
-                    StructError::from(ConfIOReason::Other(format!("invalid content: {}", other)))
-                        .err()
-                }
+                other => Err(ConfIOReason::Other(format!("invalid content: {}", other)).to_err()),
             }
         }
 
@@ -161,7 +158,7 @@ fn test_conf_std_operation_try_load() {
     let invalid = tmp_dir.join(format!("{}_invalid.toml", unique));
     std::fs::write(&invalid, "boom").unwrap();
     let err = FileBackedConf::try_load(invalid.to_str().unwrap(), &dict).unwrap_err();
-    assert!(err.to_string().contains("invalid content"));
+    assert!(matches!(err.reason(), ConfIOReason::Other(m) if m.contains("invalid content")));
 
     let _ = std::fs::remove_file(valid);
     let _ = std::fs::remove_file(invalid);
