@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.6.1] - 2026-09-19
+
+### Changed
+
+- 许可证由 Elastic License 2.0 改为 Apache License 2.0：此前本仓**没有** `LICENSE` 文件（`Cargo.toml` 与 README 却都声明 `Elastic-2.0`），本次一并补上标准 Apache-2.0 全文，并同步 `Cargo.toml` 的 `license` 字段与 README 的许可徽章/许可段
+
 ## [0.6.0] - 2026-09-19
 
 ### ⚠️ BREAKING CHANGES
@@ -43,7 +49,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Update test assertions from `err.to_string()` to `err.reason()` pattern matching (0.8 Display no longer includes variant data)
 - Fix `derive_more` v2.x feature gate
 
-[Unreleased]: https://github.com/wp-labs/wp-conf-base/compare/v0.6.0...HEAD
+[Unreleased]: https://github.com/wp-labs/wp-conf-base/compare/v0.6.1...HEAD
+[0.6.1]: https://github.com/wp-labs/wp-conf-base/compare/v0.6.0...v0.6.1
 [0.6.0]: https://github.com/wp-labs/wp-conf-base/compare/v0.5.0...v0.6.0
 [0.5.0]: https://github.com/wp-labs/wp-conf-base/compare/v0.4.0...v0.5.0
 [0.4.0]: https://github.com/wp-labs/-wp-conf-base/releases/tag/v0.4.0

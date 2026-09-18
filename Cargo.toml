@@ -1,8 +1,8 @@
 [package]
 name = "wp-conf-base"
-version = "0.6.0" # @gxl:set(version)
+version = "0.6.1" # @gxl:set(version)
 edition = "2024"
-license = "Elastic-2.0"
+license = "Apache-2.0"
 description = "Common configuration primitives, adapters, and validators shared by WarpParse connectors."
 authors = ["WarpParse Dev Team"]
 readme = "README.md"

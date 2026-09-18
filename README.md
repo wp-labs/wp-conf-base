@@ -4,7 +4,7 @@
 [![CI](https://img.shields.io/github/actions/workflow/status/wp-labs/wp-conf-base/ci.yml?branch=main)](https://github.com/wp-labs/wp-conf-base/actions/workflows/ci.yml)
 [![codecov](https://codecov.io/gh/wp-labs/wp-conf-base/graph/badge.svg?token=6SVCXBHB6B)](https://codecov.io/gh/wp-labs/wp-conf-base)
 [![Crates.io downloads](https://img.shields.io/crates/d/wp-conf-base)](https://crates.io/crates/wp-conf-base)
-![License](https://img.shields.io/badge/license-Elastic--2.0-green.svg)
+[![License](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)
 [![Rust Edition](https://img.shields.io/badge/edition-2024-orange.svg)](https://doc.rust-lang.org/edition-guide/rust-2024/index.html)
 
 `wp-conf-base` 是 WarpParse 配置体系中的底层 crate，封装了通用的配置建模、解析与校验工具，供各个 connector 或上层配置仓库复用。核心能力包括：
@@ -102,4 +102,4 @@ cargo test
 
 ## 许可
 
-本仓库遵循 Elastic License 2.0 (`Elastic-2.0`)。
+本仓库遵循 Apache License 2.0 (`Apache-2.0`)，详见 [`LICENSE`](LICENSE)。
