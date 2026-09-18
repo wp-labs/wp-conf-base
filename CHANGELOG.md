@@ -7,6 +7,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.6.0] - 2026-09-19
+
+### ⚠️ BREAKING CHANGES
+
+- 依赖 `wp-model-core` 0.9 → 0.10（上游把整数类型正名：`Value::Digit` → `Value::Int`、`DataType::Digit` → `DataType::Int`、serde 名 `"digit"` → `"int"`、公开构造器 `from_digit` → `from_int`；`DataType::Array` 的载荷类型 `String` → `ArraySubtype`）
+- 依赖 `wp-connector-api` 0.12 → 0.13（同步上游版本对齐；`wp-connector-api` 0.13 才依赖 `wp-model-core` 0.10，两者需同升）
+
+### Changed
+
+- README 补齐常用徽章（crates.io、crates.io 下载量、License、Rust Edition），CI 徽章由 `workflows/CI/badge.svg`（无链接）改用现代形式 `actions/workflow/status/.../ci.yml?branch=main` 并加上指向 Actions 的跳转链接；codecov 徽章保留
+
+### Dependencies
+
+- `wp-model-core`：`0.9` → `0.10`
+- `wp-connector-api`：`0.12` → `0.13`
+
 ## [0.5.0] - 2026-08-04
 
 ### ⚠️ BREAKING CHANGES
@@ -27,6 +43,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Update test assertions from `err.to_string()` to `err.reason()` pattern matching (0.8 Display no longer includes variant data)
 - Fix `derive_more` v2.x feature gate
 
-[Unreleased]: https://github.com/wp-labs/wp-conf-base/compare/v0.5.0...HEAD
+[Unreleased]: https://github.com/wp-labs/wp-conf-base/compare/v0.6.0...HEAD
+[0.6.0]: https://github.com/wp-labs/wp-conf-base/compare/v0.5.0...v0.6.0
 [0.5.0]: https://github.com/wp-labs/wp-conf-base/compare/v0.4.0...v0.5.0
 [0.4.0]: https://github.com/wp-labs/-wp-conf-base/releases/tag/v0.4.0
