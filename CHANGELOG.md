@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.7.0] - 2026-10-12
+
+### Changed
+- **升级到 orion-error 0.9 世代**：`orion-error` 0.8 → 0.9、`orion_conf` 0.7 → 0.8、`orion-variate` 0.13 → 0.14。消费方须一同升级以避免跨版本类型冲突。
+
 ## [0.6.1] - 2026-09-19
 
 ### Changed
